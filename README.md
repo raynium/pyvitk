@@ -7,7 +7,7 @@ pyvitk越南语分词器
 ## 这是一个用python写的越南语分词器 ##
 #### 使用的算法为n最短路径 ####
 #### 概率数据取自Phuonglh先生的vn.vitk项目: https://github.com/phuonglh/vn.vitk ####
-#### 该开源项目是用java写的, 基于spark平台, 提供多线程的分词, 分词精度高且分词速度快 ####
+#### vn.vitk项目是用java写的, 基于spark平台, 提供多线程的分词, 分词精度高且分词速度快 ####
 #### 本分词器的概率数据和词典树取自该vn.vitk, 从某种意义来说, pyvitk是vn.vitk的python改写 ####
 
 
