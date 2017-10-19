@@ -17,8 +17,8 @@ pyvitk越南语分词器
 ### 3. 用法: ###
 <pre><code>
 import pyvitk
-    sentence = 句子
-    pyvitk.cut(sentence)  # 该句的词语生成器
+sentence = 句子
+pyvitk.cut(sentence)  # 该句的词语生成器
 </code></pre>
 ### 4. 精度: ###
 
