@@ -1,30 +1,29 @@
-pyvitk越南语分词器
+pyvitk-The Vietnamese word segmenter
 ===================
-##### 作者: 黄瑞滨 #####
-##### 时间: 2017-10-19 06:38 #####
-##### Email: 574884335@qq.com #####
+##### Author: Ray Huang #####
+##### Date time: 2017-10-19 06:38 #####
+##### Email: ruibinwong@qq.com #####
 
 
-## 这是一个用python写的越南语分词器 ##
-#### 使用的算法为n最短路径 ####
-#### 概率数据取自Phuonglh先生的vn.vitk项目: https://github.com/phuonglh/vn.vitk ####
-#### vn.vitk项目是用java写的, 基于spark平台, 提供多线程的分词, 分词精度高且分词速度快 ####
-#### 本分词器的概率数据和词典树取自该vn.vitk, 从某种意义来说, pyvitk是vn.vitk的python改写 ####
+## This is a Vietnamese word segmenter written in Python. ##
+#### Algorithm: N-Shortest Path ####
+#### The probability data is taken from Mr. Phuonglh's vn.vitk project: https://github.com/phuonglh/vn.vitk ####
+#### vn.vitk is a spark project using Java. It provides multithreading work segmentation for high-speed word segmentation solution ####
+#### The probability data and dictionary tree of the tokenizer is taken from the vn.vitk. ####
 
 
-## 分词思路:
-### 1. 根据句子生成DAG ###
-### 2. 根据词典计算概率选择DAG的最短路径 ###
-### 3. 用法: ###
+
+## 3. Usage: ##
 <pre><code>
 import pyvitk
-sentence = 句子
-pyvitk.cut(sentence)  # 该句的词语生成器
+sentence = 'Vietnamese sentence'
+pyvitk.cut(sentence)  # word segmentation generator
 </code></pre>
-### 4. 精度: ###
 
-### 5. F值: 0.890503181119 ###
-#### 详细数据 ####
+## 4. Performance: ##
+
+### 5. F1 score: 0.890503181119 ###
+#### Specific data ####
 <pre><code>
              precision    recall  f1-score   support
 
@@ -35,3 +34,4 @@ pyvitk.cut(sentence)  # 该句的词语生成器
 
 avg / total      0.896     0.892     0.891     25033
 </code></pre>
+BEMS represent the position tag in a word: B (Begin), E (End), M (Middle), and S (Single). 
